@@ -327,7 +327,6 @@ logo = ("""
 \033[1;91m----------------------------------------------
 \033[1;91mᴛᴏᴏʟ ɴᴀᴍᴇ ʀᴇᴅ
 \033[1;32mꜰᴀᴄᴇʙᴏᴏᴋ ɪᴅ ᴄʟᴏɴᴇ
-\033[1;32m15 ᴅᴇʏ 150 30ᴅᴀʏ 200
 \033[1;32mᴠᴇʀꜱɪᴏɴ 14.0
 \033[1;91m----------------------------------------------
 """)                                              
@@ -362,8 +361,8 @@ def meyexudi():
       print(' \x1b[1;92m║══[𝟸] UNACTIVE ID NOT ALLOW')
       print(' \x1b[1;93m║══[𝟸] CP ID LOGIN 50%')
       print(' \x1b[1;94m║══[𝟸] WI-FI WORKING 80%')
-      print(' \x1b[1;95m║══[𝟸] 15 DAY 400 TAKA ')
-      print(' \x1b[38;5;50m║══[𝟸] 30 DAY 800 TAKA ')
+      print(' \x1b[1;95m║══[𝟸] 15 DAY 150 TAKA ')
+      print(' \x1b[38;5;50m║══[𝟸] 30 DAY 250TAKA ')
       print(" \033[1;32m║══[𝟸] YOUR KEY : "+id)
       input(' \x1b[38;5;50m╚══[𝟹] IF U WANT TO BUY THEN PRESS ENTER ')
       tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+8801867850909?text='+tks),approval()      
